@@ -11,6 +11,11 @@ class UserManager:
     
     def get_user(self, username):
         return self.users.get(username)
+    
+    def delete_user(self, username):
+        if username in self.users:
+            del self.users[username]
+
 
 def get_weather(temp):
     if temp > 20 :
